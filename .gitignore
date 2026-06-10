@@ -1,3 +1,4 @@
 backups/
 *.bak
 .DS_Store
+references/
