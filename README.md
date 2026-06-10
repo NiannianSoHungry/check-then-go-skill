@@ -229,21 +229,56 @@ git reset --hard {检查点的 commit hash}
 
 ## 快速开始
 
-**安装**
+> 装 skill 这种事，交给 Agent 自己搞定。
+
+### 一键安装
+
+打开你的 Claude Code / Hermes / OpenClaw / Codex，直接告诉 Agent：
+
+```
+去 GitHub 装一下 check-then-go 这个 skill：https://github.com/NiannianSoHungry/check-then-go-skill
+```
+
+Agent 会自动找到你平台的 skills 目录，克隆下来并注册好。
+
+之后随时说 **"请用 check-then-go 来处理这个任务"**，Agent 就会切换到安全模式。
+
+---
+
+### 🔧 手动安装
 
 ```bash
-hermes skills install NiannianSoHungry/check-then-go-skill
+git clone https://github.com/NiannianSoHungry/check-then-go-skill <TARGET>
 ```
 
-**使用**
+各平台的 `TARGET` 路径：
 
-安装后，Agent 在处理有副作用的任务时会自动加载此 Skill。
+| 宿主 | 路径 |
+|------|------|
+| Claude Code | `~/.claude/skills/check-then-go` |
+| Codex | `~/.codex/skills/check-then-go` |
+| OpenClaw | 你的 workspace skills 目录 |
+| Hermes | `~/.hermes/skills/workflow/check-then-go` 或直接 `hermes skills install` |
+| 其他 | 问你的 Agent："我的 skills 目录在哪？" |
 
-也可以手动触发：
+也可以直接把 `SKILL.md` 和本文件放进项目根目录，Agent 读到了就会照办。
 
-```text
-请使用 check-then-go skill 来处理这个任务
-```
+---
+
+### 🚀 怎么知道它生效了？
+
+当你让 Agent 改文件、写代码、调配置时，如果它突然开始：
+
+- 🎯 **复述你的需求**："我理解你要..."
+- 🧠 **给多个方案**："方案 A / B / C..."
+- ⚙️ **改之前先 git commit**："先创建一个检查点..."
+- ✅ **改一步确认一步**："这一步完成了，继续吗？"
+
+那就说明 check-then-go 已经在工作了。
+
+如果 Agent 上来就埋头修改，跳过了复述、方案和确认 —— 说明没装上，再告诉它一次。
+
+---
 
 **完整规范**
 
