@@ -67,7 +67,7 @@ flowchart TD
 
     subgraph 阶段三["🔍 阶段三：方案细化"]
         direction LR
-        C1[用户选定方案] --> C2[反该实施细节]
+        C1[用户选定方案] --> C2[反诘实施细节]
         C2 --> C3[给出完整实施方案]
     end
 
