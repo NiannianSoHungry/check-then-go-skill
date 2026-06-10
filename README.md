@@ -326,7 +326,7 @@ Agent：同时修改 CSS、HTML、JavaScript 三个文件
 ## 安装
 
 ~~~bash
-hermes skills install --from github username/check-then-go
+hermes skills install NiannianSoHungry/check-then-go-skill
 ~~~
 
 ## 使用
@@ -348,4 +348,4 @@ MIT License
 
 ## 作者
 
-Your Name &lt;your.email@example.com&gt;
+贪吃小猫粘粘老师 nianniansohungry.github.io
